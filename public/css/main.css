@@ -1,0 +1,158 @@
+/*---------------------------------------------------------------------------*\
+                                      SETUP
+\*---------------------------------------------------------------------------*/
+* {
+  -webkit-boxsizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background: #e4e4e4;
+  height: 100%;
+  min-height: 100%;
+  font-family: Josefin Sans, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.squeeze {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+  height: 100%;
+  max-width: 1000px;
+}
+
+
+
+/*---------------------------------------------------------------------------*\
+                                      HEADER
+\*---------------------------------------------------------------------------*/
+.header-main {
+  background: #EFDD4F;
+  border-bottom: 4px solid #b9b489;
+  height: 65px;
+  display: flex;
+  align-items: stretch;
+}
+
+.header-main .title {
+  color: #000;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.logo-container {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.nav-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 4;
+}
+
+.link {
+  margin: 0 25px;
+}
+
+.link a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+
+/*---------------------------------------------------------------------------*\
+                                      SIGN IN
+\*---------------------------------------------------------------------------*/
+
+.sign-in-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.sign-in-container .sign-in {
+  text-decoration: underline;
+  color: #000;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+
+/*---------------------------------------------------------------------------*\
+                                       FEED
+\*---------------------------------------------------------------------------*/
+
+.feed-container { margin-top: 20px; }
+.clear { display: block; float: none; clear: both }
+
+.post {
+  width: 32%;
+  background: white;
+  padding: 5px;
+  float: left;
+}
+.post:nth-child(n) {
+  margin-bottom: 2%;
+  margin-right: 2%;
+}
+.post:nth-child(3n) {
+  margin-right: 0;
+  margin-bottom: 0;
+}
+@media (max-width: 1200px) {
+  .post {
+    width: 32%;
+  }
+  .post:nth-child(n) {
+    margin-bottom: 2%;
+    margin-right: 2%;
+  }
+  .post:nth-child(3n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 900px) {
+  .post {
+    width: 48%;
+  }
+  .post:nth-child(n) {
+    margin-bottom: 4%;
+    margin-right: 4%;
+  }
+  .post:nth-child(2n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+@media (max-width: 320px) {
+  .post {
+    width: 100%;
+  }
+  .post:nth-child(n) {
+    margin-bottom: 10%;
+    margin-right: 10%;
+  }
+  .post:nth-child(1n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+.post img {
+  max-width: 100%;
+}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="squeeze">
+    <div class="feed-container">
+      {% for item in feed %}
+        {% if item.type === 'image' %}
+          <div class="post">
+            <img src="{{ item.images.standard_resolution.url }}" alt="{{ item.user.username }}">
+          </div>
+        {% endif %}
+      {% endfor %}
+      <div class="clear"></div>
+    </div>
+  </div>
+{% endblock %}

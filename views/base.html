@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Express Insta Auth</title>
+  <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+  <header class="header-main">
+    <div class="logo-container">
+      <a class="title" href="/">Express Instagram Oauth</a>
+    </div>
+    <div class="nav-container">
+      {% if authenticated %}
+        <div class="link"><a href="/feed">Feed</a></div>
+      {% endif %}
+      <div class="link"><a href="https://www.instagram.com/">Instagram</a></div>
+    </div>
+  </header>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
