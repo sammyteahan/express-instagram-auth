@@ -1,3 +1,4 @@
+require('dotenv').config();
 var express = require('express');
 var nunjucks = require('nunjucks');
 var port = process.env.PORT || 3000;
